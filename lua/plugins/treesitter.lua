@@ -1,5 +1,3 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
-
 -- Customize Treesitter
 
 ---@type LazySpec
@@ -11,6 +9,23 @@ return {
       "lua",
       "vim",
       -- add more arguments for adding more treesitter parsers
+      "json",
+      "yaml",
+      "toml",
+      "html",
+      "css",
+      "javascript",
+      "typescript",
+      "tsx",
+      "python",
+      "rust",
+      "c",
+      "cpp",
+      "java",
+      "go",
+      "bash",
+      "regex",
+      "dockerfile",
     })
   end,
 }
