@@ -7,6 +7,15 @@ vim.keymap.set("n", "<leader>w", "<cmd>wa<cr>", { silent = true })
 
 return {
   {
+    "craftzdog/solarized-osaka.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function()
+      vim.cmd("colorscheme solarized-osaka")
+    end,
+  },
+  {
     'nanozuki/tabby.nvim',
     event = 'VimEnter',
     dependencies = 'nvim-tree/nvim-web-devicons',
@@ -61,30 +70,6 @@ return {
   },
   {
     "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = {
-          "bash",
-          "c",
-          "lua",
-          "python",
-          "query",
-          "vim",
-          "vimdoc",
-          "json",
-          "typescript",
-          "go",
-          "gosum",
-          "gomod",
-          "prisma",
-          "tsx",
-          "html",
-          "css",
-          "java",
-          -- "javascript",
-        }
-      })
-    end,
   },
   {
     "nvim-telescope/telescope.nvim",
