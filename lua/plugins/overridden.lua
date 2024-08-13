@@ -1,18 +1,6 @@
-vim.opt.wrap = true
-
 -- save all files at once
 vim.keymap.set("n", "<leader>w", "<cmd>wa<cr>", { silent = true })
 
--- open definition in new split
-vim.keymap.set("n", "<leader>a", "<cmd>lua vim.lsp.buf.definition()<cr>", { silent = true })
-vim.keymap.set("n", "<leader>v", "<cmd>vsplit | lua vim.lsp.buf.definition()<cr>", { silent = true })
-vim.keymap.set("n", "<leader>s", "<cmd>belowright split | lua vim.lsp.buf.definition()<cr>", { silent = true })
-
--- telescope
--- search symbol
-vim.keymap.set("n", "<C-p>", "<cmd>Telescope find_files<cr>", { silent = true })
-vim.keymap.set("n", "<C-f>", "<cmd>Telescope live_grep<cr>", { silent = true })
-vim.keymap.set("n", "<C-s>", "<cmd>Telescope lsp_document_symbols<cr>", { silent = true })
 
 return {
   {
