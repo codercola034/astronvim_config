@@ -23,19 +23,17 @@ return {
   },
   {
     "nvim-telescope/telescope.nvim",
-    config = function()
+    opts = function(_, opts)
       local actions = require "telescope.actions"
-      require("telescope").setup({
-        mappings = {
-          i = {
-            ["<C-n>"] = actions.move_selection_next,
-            ["<C-p>"] = actions.move_selection_previous,
-            ["<C-j>"] = actions.cycle_history_next,
-            ["<C-k>"] = actions.cycle_history_prev,
-          },
-          n = { q = actions.close },
-        }
-      })
+      opts.mappings = {
+        i = {
+          ["<C-n>"] = actions.move_selection_next,
+          ["<C-p>"] = actions.move_selection_previous,
+          ["<C-j>"] = actions.cycle_history_next,
+          ["<C-k>"] = actions.cycle_history_prev,
+        },
+        n = { q = actions.close },
+      }
     end,
   },
   {
