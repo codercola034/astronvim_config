@@ -1,8 +1,24 @@
--- save all files at once
-vim.keymap.set("n", "<leader>w", "<cmd>wa<cr>", { silent = true })
-
-
 return {
+    {
+    "nvim-neo-tree/neo-tree.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("neo-tree").setup({
+        event_handlers = {
+
+          {
+            event = "file_open_requested",
+            handler = function()
+              -- auto close
+              -- vimc.cmd("Neotree close")
+              -- OR
+              require("neo-tree.command").execute({ action = "close" })
+            end
+          },
+        }
+      })
+    end,
+  },
   {
     "craftzdog/solarized-osaka.nvim",
     lazy = false,
