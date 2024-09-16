@@ -1,5 +1,18 @@
 return {
   {
+    "supermaven-inc/supermaven-nvim",
+    config = function()
+      require("supermaven-nvim").setup({
+        log_level = "warn",
+        keymaps = {
+          accept_suggestion = "<c-e>",
+          clear_suggestion = "<C-]>",
+          -- accept_word = "<C-e>",
+        },
+      })
+    end,
+  },
+  {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
       event_handlers = {
@@ -93,16 +106,16 @@ return {
       end
     end,
   },
-  {
-    "github/copilot.vim",
-    event = "VeryLazy",
-    autoStart = true,
-    config = function()
-      vim.g.copilot_no_tab_map = true
-      vim.g.copilot_assume_mapped = true
-      vim.g.copilot_tab_fallback = ""
-      vim.api.nvim_set_keymap("i", "<Tab>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-      vim.api.nvim_set_keymap("i", "<c-e>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-    end,
-  },
+  -- {
+  --   "github/copilot.vim",
+  --   event = "VeryLazy",
+  --   autoStart = true,
+  --   config = function()
+  --     vim.g.copilot_no_tab_map = true
+  --     vim.g.copilot_assume_mapped = true
+  --     vim.g.copilot_tab_fallback = ""
+  --     vim.api.nvim_set_keymap("i", "<Tab>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+  --     vim.api.nvim_set_keymap("i", "<c-e>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+  --   end,
+  -- },
 }

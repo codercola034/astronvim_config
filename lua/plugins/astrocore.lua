@@ -60,7 +60,6 @@ return {
         -- telescope
         ["<C-p>"] = "<cmd>Telescope find_files<cr>",
         ["<C-f>"] = "<cmd>Telescope live_grep<cr>",
-        ["<C-s>"] = "<cmd>Telescope lsp_document_symbols<cr>",
 
         -- mappings seen under group name "Buffer"
         ["<Leader>bD"] = {
@@ -75,7 +74,7 @@ return {
         -- this is useful for naming menus
         ["<Leader>b"] = { desc = "Buffers" },
         -- quick save
-        -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+        ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
       },
       t = {
         -- setting a mapping to false will disable it
