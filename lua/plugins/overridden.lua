@@ -9,12 +9,22 @@ return {
           clear_suggestion = "<C-]>",
           -- accept_word = "<C-e>",
         },
+        disable_inline_completion = true,
       })
     end,
   },
   {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
+      window = {
+        position = "right",
+        width = 100,
+      },
+      filesystem= {
+        filtered_items = {
+          hide_hidden = false
+        },
+      },
       event_handlers = {
         {
           event = "file_opened",
@@ -106,4 +116,9 @@ return {
       end
     end,
   },
+  -- {
+  --   "wellle/context.vim",
+  --   config = function()
+  --   end
+  -- }
 }
