@@ -21,7 +21,7 @@ return {
       format_on_save = {
         enabled = true, -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
-          "go", "javascript", "typescript", "css", "javascriptreact", "typescriptreact"
+          "go", "javascript", "typescript", "css", "javascriptreact", "typescriptreact", "html", "json", "yaml", "markdown"
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",

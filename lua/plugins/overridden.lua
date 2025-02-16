@@ -116,9 +116,4 @@ return {
       end
     end,
   },
-  -- {
-  --   "wellle/context.vim",
-  --   config = function()
-  --   end
-  -- }
 }
