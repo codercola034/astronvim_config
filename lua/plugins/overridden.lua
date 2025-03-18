@@ -1,28 +1,19 @@
 return {
   {
-    "supermaven-inc/supermaven-nvim",
-    config = function()
-      require("supermaven-nvim").setup({
-        log_level = "warn",
-        keymaps = {
-          accept_suggestion = "<c-e>",
-          clear_suggestion = "<C-]>",
-          -- accept_word = "<C-e>",
-        },
-        disable_inline_completion = true,
-      })
-    end,
-  },
-  {
     "nvim-neo-tree/neo-tree.nvim",
     opts = {
+      source_selector = {
+        winbar = false,
+        statusline = false
+      },
       window = {
         position = "left",
-        width = 100,
+        width = 50,
       },
       filesystem= {
         filtered_items = {
-          hide_hidden = false
+          hide_hidden = false,
+          hide_gitignored = false,
         },
       },
       event_handlers = {
@@ -79,15 +70,6 @@ return {
       vim.keymap.set("n", "<C-j>", "<cmd>TmuxNavigateDown<cr>", { silent = true })
       vim.keymap.set("n", "<C-k>", "<cmd>TmuxNavigateUp<cr>", { silent = true })
       vim.keymap.set("n", "<C-l>", "<cmd>TmuxNavigateRight<cr>", { silent = true })
-    end,
-  },
-  {
-    "iamcco/markdown-preview.nvim",
-    cmd = { "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop" },
-    ft = { "markdown" },
-    build = function() vim.fn["mkdp#util#install"]() end,
-    config = function()
-      vim.keymap.set("n", "<leader>mp", "<cmd>MarkdownPreviewToggle<cr>")
     end,
   },
   {
