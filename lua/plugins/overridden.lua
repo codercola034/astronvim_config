@@ -1,32 +1,5 @@
 return {
   {
-    "nvim-neo-tree/neo-tree.nvim",
-    opts = {
-      source_selector = {
-        winbar = false,
-        statusline = false
-      },
-      window = {
-        position = "left",
-        width = 50,
-      },
-      filesystem= {
-        filtered_items = {
-          hide_hidden = false,
-          hide_gitignored = false,
-        },
-      },
-      event_handlers = {
-        {
-          event = "file_opened",
-          handler = function(file_path)
-            require("neo-tree").close_all()
-          end
-        },
-      },
-    },
-  },
-  {
     "craftzdog/solarized-osaka.nvim",
     lazy = false,
     priority = 1000,
